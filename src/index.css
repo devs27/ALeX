@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-amrita: #A4123F;
+    --color-amrita-burgundy: #881337;
+  }
+
+  body {
+    @apply font-sans bg-slate-50 text-slate-900 dark:bg-[#090D14] dark:text-slate-100 transition-colors duration-300;
+  }
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Amrita Grid Pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(164, 18, 63, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: radial-gradient(rgba(244, 63, 94, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle dot glow */
+.glow-spot {
+  background: radial-gradient(circle, rgba(164, 18, 63, 0.15) 0%, rgba(164, 18, 63, 0) 70%);
+}
